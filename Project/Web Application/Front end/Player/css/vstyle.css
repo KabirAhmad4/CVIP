@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.video-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.video-options {
+    margin-top: 1em;
+}
+
+.csv-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.csv-options {
+    margin-top: 1em;
+}
+
+.line {
+    height: 50px;
+    border-left: 1px solid #ccc;
+    margin: 0 1em;
+}
+
+input[type="search"] {
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    color: #333;
+    background-color: #fff;
+    outline: none;
+}
+
+button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+video {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    text-align: left;
+}
+
+table th {
+    background-color: #f0f0f0;
+}

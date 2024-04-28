@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <link rel="stylesheet" href="css/tstyle.css">
+</head>
+<body style="overflow-y: auto;">
+
+    <script src="https://kit.fontawesome.com/628c8d2499.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <header>
+        <div class="overlay">
+    <h1>License Plate Recognition Sytem</h1>
+    <h3><i>By Kabir Ahmad</i></h3>
+    
+        
+            </div>
+    </header>
+    <style>
+        *{padding: 0; margin: 0; box-sizing: border-box;}
+body{height: 900px;}
+header {
+	/* background-image: url("https://images.unsplash.com/photo-1597220669155-4a3e59232dc9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D");
+	 */
+    text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+header .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);
+	
+}
+
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 60px;
+	margin-bottom: 30px;
+}
+
+h3, p {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 30px;
+}
+
+button {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+}
+button:hover{
+	cursor: pointer;
+}
+
+
+    </style>
+    
+
+
+
+
+
+
+
+
+    <nav id="menu" style="margin-top: -20px;">
+        <div class="menu-item">
+            <div class="menu-text">
+                <a href="#">Literature View</a>
+            </div>
+            <div class="sub-menu">
+                <div class="icon-box gb b">
+                    <div class="icon"><i class="far fa-users-class"></i></div>
+                    <div class="text">
+                        <div class="title">Number Plate Extraction<i class="far fa-arrow-right"></i></div>
+                        <div class="sub-text">
+                            <a href="https://www.researchgate.net/publication/303822583_An_Efficient_Approach_for_Number_Plate_Extraction_from_Vehicles_Image_under_Image_Processing">Paper no 1</a></div>
+                    </div>
+                </div>
+                <div class="icon-box gb b">
+                    <div class="icon"><i class="far fa-users-class"></i></div>
+                    <div class="text">
+                        <div class="title">Number Plate Extraction<i class="far fa-arrow-right"></i></div>
+                        <div class="sub-text">
+                            <a href="https://www.semanticscholar.org/paper/Recognition-of-Vehicle-Number-Plate-Using-Image-Solanki-Rajguru/d3107fab007248323a059195767877701c4564b8">Paper no 2</a></div>
+                    </div>
+                </div>
+                <div class="icon-box gb b">
+                    <div class="icon"><i class="far fa-users-class"></i></div>
+                    <div class="text">
+                        <div class="title">Number Plate Extraction<i class="far fa-arrow-right"></i></div>
+                        <div class="sub-text">
+                            <a href="https://web.archive.org/web/20201227041808/https://zenodo.org/record/1331865/files/4283.pdf">Paper no 3</a></div>
+                    </div>
+                </div>
+                <div class="icon-box gb b">
+                    <div class="icon"><i class="far fa-users-class"></i></div>
+                    <div class="text">
+                        <div class="title">Number Plate Extraction<i class="far fa-arrow-right"></i></div>
+                        <div class="sub-text">
+                            <a href="https://www.researchgate.net/publication/324726672_Dynamic_traffic_rule_violation_monitoring_system_using_automatic_number_plate_recognition_with_SMS_feedback">Paper no 4</a></div>
+                    </div>
+                </div>
+                
+               
+            </div>
+        </div>
+        <div class="menu-item highlight">
+            <div class="menu-text">
+                <a href="#">Project Proposal</a>
+            </div>
+            <div class="sub-menu double">
+                
+                <div class="icon-box gb c">
+                    <div class="icon"><i class="far fa-school"></i></div>
+                    <div class="text">
+                        <div class="title">Document <i class="far fa-arrow-right"></i></div>
+                        <div class="sub-text"><a href="E:\Study\6th Semester\CVIP_Github\Project\Web Application\CVIP_Proposal_Template__Kabir_new.pdf">Click Here</a></div>
+                    </div>
+                </div>
+                
+               
+               
+                <div class="sub-menu-holder"></div>
+            </div>
+        </div>
+        <div class="menu-item highlight">
+            <div class="menu-text">
+                <a href="#">DataSet</a>
+            </div>
+            <div class="sub-menu triple">
+                
+                
+                <div class="icon-box flat">
+                    <div class="icon"><i class="fal fa-plug"></i></div>
+                    <div class="text">
+                        <div class="title">Roboflow<i class="far fa-arrow-right"></i></div>
+                        <div class="sub-text"><a href="https://universe.roboflow.com/mochoye/license-plate-detector-ogxxg/dataset/2">Click Here</a></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+       
+        <div id="sub-menu-container">
+            <div id="sub-menu-holder">
+                <div id="sub-menu-bottom">
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+ 
+
+
+ 
+    <div class="container">
+        <div class="video-container">
+            <div>
+               <input type="search"  id="video-search" placeholder="Search for video (MP4)">
+                <!--  <button id="video-browse">Browse</button> -->
+              
+
+          
+              
+                    <label for="file" id="video-browse" class="file">
+                        Upload
+                        <ion-icon name="cloud-upload-outline"></ion-icon>
+                    </label>
+                    
+               
+
+            </div>
+            <style>
+               
+input[type=file] { display: none; }
+label[for=file] {
+
+	
+	justify-items: center;
+	align-content: center;
+	color: yellow;
+	border: .2em solid blue;
+	background: hsl(0 0 0/0);
+	padding: .85em 1.5em;
+	font-size:small;
+	border-radius: 2em;
+	transition: 1s;
+	&:hover, &:focus, &:active {
+		background: #001a8f;
+		color: #fff;
+        border-color: #001a8f;
+	}
+
+
+}
+ 
+
+
+
+            </style>
+            <div class="video-options" ">
+                <video id="video-player" width="1080" height="820" controls>
+                    <source id="video-source" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    
+    
+        <div class="csv-container" style="margin-left: 300px;">
+           
+            <div>
+                <input type="search" id="csv-search" placeholder="Search for CSV file">
+                <button id="csv-browse">Browse</button>
+            </div>
+     
+       
+            <div class="csv-options" >
+                <table id="csv-table" >
+                    <thead>
+                        <tr>
+                            <th style="color: navy;">Detected Numbers</th>
+                          
+                            
+                        </tr>
+                  </thead>
+                    <tbody id="csv-data" style="color: white; ">
+                     
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+
+<!-- Xasa -->
+<footer class="footer">
+    <div class="footer__parralax">
+      <div class="footer__parralax-trees"></div>
+      <div class="footer__parralax-moto"></div>
+      <div class="footer__parralax-secondplan"></div>
+      <div class="footer__parralax-premierplan"></div>
+      <div class="footer__parralax-voiture"></div>
+    </div>
+    <div class="container">
+      <div class="footer__columns">
+        <div class="footer__col">
+          <h3 class="footer__col-title">
+            <i data-feather="shopping-bag"></i> <span></span></h3>
+          <nav class="footer__nav">
+            
+          </nav>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">
+            <i data-feather="share-2"></i> <span>Social Links
+
+            </span></h3>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="" class="footer__nav-link">
+                  <i data-feather="youtube">Linked In</i><span></span>
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="" class="footer__nav-link">
+                  <i data-feather="facebook"></i><span>Facebook</span>
+                  
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="" class="footer__nav-link">
+                  <i data-feather="instagram"></i><span>Instagram</span>
+                  
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">
+            <i data-feather="send"></i> <span>Contact</span></h3>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="mekabirahmad.netlify.app" class="footer__nav-link">
+                  mkabirahmad01@gmail.com
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="mailto:contact.laboiserie@gmail.com" class="footer__nav-link">
+                  Muhammad Kabir Ahmad
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="mailto:contact.laboiserie@gmail.com" class="footer__nav-link">
+                  +92-308-4859233
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+        <div class="footer__copyrights">
+          <p>Réalisé par <a href="https://twitter.com/silvereledev" target="_blank">@SilvereLeDev</a></p>
+        </div>
+    </div>
+  </footer>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+
+
+
+.container {
+  
+  
+  margin: 0 auto;
+}
+
+.footer {
+  position: relative;
+  margin-top: 200px;
+  padding: 3rem 0;
+  color: #fff;
+  background: #000;
+  
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__col-title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.footer__col-title * ~ span {
+  margin-left: 1rem;
+}
+
+.footer a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a * ~ span {
+  margin-left: 1rem;
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer__copyrights {
+  padding-top: 3rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer__copyrights p {
+  display: flex;
+}
+
+.footer__copyrights a {
+  margin-left: 0.5rem;
+}
+
+@keyframes parralax {
+  0% {
+    background-position: 260px;
+  }
+  100% {
+    background-position: -10000vw;
+  }
+}
+
+@keyframes moto {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  5% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  25% {
+    transform: translateY(60px) rotate(-20deg);
+  }
+  49% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  51% {
+    transform: translateY(0) rotate(1deg);
+  }
+  75% {
+    transform: translateY(60px) rotate(20deg);
+  }
+  80% {
+    transform: translateY(60px) rotate(0deg);
+  }
+  98% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes voiture {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.footer__parralax {
+  position: absolute;
+  left: 0;
+  top: -300px;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer__parralax-premierplan {
+  background-position: 260px;
+}
+
+.footer__parralax-trees,
+.footer__parralax-premierplan,
+.footer__parralax-secondplan {
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat-x;
+  background-position-y: 100% !important;
+  animation: parralax 600s linear infinite;
+}
+
+.footer__parralax-moto {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  margin-left: -250px;
+  height: 200px;
+  width: 150px;
+  background: url(https://i.ibb.co/JCGfFJd/moto-net.gif);
+  background-repeat: no-repeat;
+  transform-origin: 50% 80%;
+  animation: moto 5s linear infinite;
+}
+
+.footer__parralax-voiture {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: 250px;
+  height: 114px;
+  width: 206px;
+  background: url(https://i.ibb.co/0Qhp4DN/voiture-fumee.gif);
+  background-repeat: no-repeat;
+  animation: voiture 1s linear infinite;
+}
+
+.footer__parralax-trees {
+  background-image: url(https://i.ibb.co/nQM4PGJ/arbres.png);
+  bottom: -60px;
+  animation-duration: 1000s;
+}
+
+.footer__parralax-premierplan {
+  background-image: url(https://i.ibb.co/RQhDWbk/premierplanv3.png);
+  animation-duration: 500s;
+}
+
+.footer__parralax-secondplan {
+  background-image: url(https://i.ibb.co/J3TjC4W/second-plan.png);
+  animation-duration: 600s;
+}
+
+</style>
+
+
+
+
+<!-- Footer -->
+    <script>
+        // Get references to the video player, search input elements, and browse buttons
+        const videoPlayer = document.getElementById('video-player');
+        const videoSearch = document.getElementById('video-search');
+        const videoBrowse = document.getElementById('video-browse');
+        const csvSearch = document.getElementById('csv-search');
+        const csvBrowse = document.getElementById('csv-browse');
+
+        // Get a reference to the CSV data element
+        const csvData = document.getElementById('csv-data');
+
+        // Add an event listener to the video browse button
+        videoBrowse.addEventListener('click', () => {
+            // Open a file picker dialog for selecting MP4 files
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'video/mp4';
+
+            input.onchange = (event) => {
+                // Get the selected file
+                const file = event.target.files[0];
+
+                // Create a new URL object for the video file
+                const videoUrl = URL.createObjectURL(file);
+
+                // Set the source of the video player to the new URL object
+                videoPlayer.src = videoUrl;
+
+                // Load the video file
+                videoPlayer.load();
+
+                // Play the video file
+                videoPlayer.play();
+            };
+
+            input.click();
+        });
+
+        // Add an event listener to the CSV browse button
+        csvBrowse.addEventListener('click', () => {
+            // Open a file picker dialog for selecting CSV files
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'text/csv';
+
+            input.onchange = (event) => {
+                // Get the selected file
+                const file = event.target.files[0];
+
+                // Read the contents of the CSV file
+                const reader = new FileReader();
+
+                reader.onload = (event) => {
+                    // Get the contents of the CSV file as a string
+                    const csvString = event.target.result;
+
+                    // Parse the CSV string into an array of objects
+                    const csvDataArray = parseCsv(csvString);
+
+                    // Clear the existing CSV data
+                    csvData.innerHTML = '';
+
+                    // Add the new CSV data to the table
+                    csvDataArray.forEach((row) => {
+                        const rowElement = document.createElement('tr');
+
+                        Object.values(row).forEach((value) => {
+                            const cellElement = document.createElement('td');
+                            cellElement.textContent = value;
+                            rowElement.appendChild(cellElement);
+                        });
+
+                        csvData.appendChild(rowElement);
+                    });
+                };
+
+                // Read the contents of the CSV file as text
+                reader.readAsText(file);
+            };
+
+            input.click();
+        });
+
+        // Add an event listener to the search input element
+        videoSearch.addEventListener('input', (event) => {
+            // Get the search query from the input element
+            const query = event.target.value.trim();
+
+            // Find the video file with the matching name
+            const videoFile = files.find((file) => file.name.toLowerCase() === query.toLowerCase() && file.type === 'video/mp4');
+
+            if (videoFile) {
+                // Create a new URL object for the video file
+                const videoUrl = URL.createObjectURL(videoFile);
+
+                // Set the source of the video player to the new URL object
+                videoPlayer.src = videoUrl;
+
+                // Load the video file
+                videoPlayer.load();
+
+                // Play the video file
+                videoPlayer.play();
+            }
+        });
+
+        // Add an event listener to the search input element
+        csvSearch.addEventListener('input', (event) => {
+            // Get the search query from the input element
+            const query = event.target.value.trim();
+
+            // Find the CSV file with the matching name
+            const csvFile = files.find((file) => file.name.toLowerCase() === query.toLowerCase() && file.type === 'text/csv');
+
+            if (csvFile) {
+                // Read the contents of the CSV file
+                const reader = new FileReader();
+
+                reader.onload = (event) => {
+                    // Get the contents of the CSV file as a string
+                    const csvString = event.target.result;
+
+                    // Parse the CSV string into an array of objects
+                    const csvDataArray = parseCsv(csvString);
+
+                    // Clear the existing CSV data
+                    csvData.innerHTML = '';
+
+                    // Add the new CSV data to the table
+                    csvDataArray.forEach((row) => {
+                        const rowElement = document.createElement('tr');
+
+                        Object.values(row).forEach((value) => {
+                            const cellElement = document.createElement('td');
+                            cellElement.textContent = value;
+                            rowElement.appendChild(cellElement);
+                        });
+
+                        csvData.appendChild(rowElement);
+                    });
+                };
+
+                // Read the contents of the CSV file as text
+                reader.readAsText(csvFile);
+            }
+        });
+
+        // CSV parsing function
+        function parseCsv(csvString) {
+            // Split the CSV string into rows
+            const rows = csvString.split('\n');
+
+            // Initialize an array to hold the parsed data
+            const data = [];
+
+            // Loop through each row
+            rows.forEach((row) => {
+                // Split the row into cells
+                const cells = row.split(',');
+
+                // Remove any empty cells
+                const filteredCells = cells.filter((cell) => cell.trim() !== '');
+
+                // Add the row to the data array
+                data.push(filteredCells.reduce((obj, cell, index) => {
+                    obj[`Column ${index + 1}`] = cell;
+                    return obj;
+                }, {}));
+            });
+
+            // Return the parsed data
+            return data;
+        }
+    </script> 
+
+</body>
+</html>
